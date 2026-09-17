@@ -1,0 +1,629 @@
+/* =========================
+   CAMPUSAI - GLOBAL CSS
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #07111f;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    background: rgba(7, 17, 31, 0.88);
+    backdrop-filter: blur(15px);
+    padding: 18px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.navbar-brand {
+    color: white !important;
+    font-size: 25px;
+    font-weight: 800;
+}
+
+.navbar-brand i {
+    color: #6c63ff;
+}
+
+.navbar-brand span {
+    color: #6c63ff;
+}
+
+.nav-link {
+    color: #c8d0dc !important;
+    margin: 0 8px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: white !important;
+}
+
+.ai-nav-btn {
+    border: none;
+    background: #6c63ff;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.ai-nav-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(108,99,255,0.35);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding-top: 110px;
+    padding-bottom: 70px;
+
+    background:
+        radial-gradient(
+            circle at 80% 25%,
+            rgba(108,99,255,0.25),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 15% 80%,
+            rgba(0,210,255,0.10),
+            transparent 30%
+        );
+}
+
+.badge-ai {
+    display: inline-block;
+    padding: 9px 16px;
+    border: 1px solid rgba(108,99,255,0.45);
+    border-radius: 30px;
+    color: #aaa5ff;
+    background: rgba(108,99,255,0.08);
+    margin-bottom: 25px;
+    font-size: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(48px, 7vw, 82px);
+    line-height: 1.04;
+    font-weight: 800;
+    letter-spacing: -4px;
+}
+
+.hero h1 span {
+    color: #6c63ff;
+}
+
+.hero-text {
+    color: #aeb8c7;
+    max-width: 650px;
+    font-size: 18px;
+    line-height: 1.75;
+    margin: 25px 0;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.primary-btn {
+    border: none;
+    background: #6c63ff;
+    color: white;
+    padding: 14px 23px;
+    border-radius: 11px;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(108,99,255,0.35);
+}
+
+.secondary-btn {
+    text-decoration: none;
+    color: white;
+    border: 1px solid #344154;
+    padding: 13px 22px;
+    border-radius: 11px;
+    transition: 0.3s;
+}
+
+.secondary-btn:hover {
+    background: #111e30;
+    color: white;
+}
+
+/* =========================
+   HERO STATS
+========================= */
+
+.hero-stats {
+    display: flex;
+    gap: 50px;
+    margin-top: 45px;
+}
+
+.hero-stats h4 {
+    font-size: 25px;
+    margin-bottom: 4px;
+}
+
+.hero-stats p {
+    color: #7f8b9c;
+    font-size: 13px;
+}
+
+/* =========================
+   AI PREVIEW CARD
+========================= */
+
+.ai-card {
+    background: rgba(18,31,49,0.82);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 23px;
+    padding: 22px;
+    box-shadow: 0 30px 80px rgba(0,0,0,0.38);
+    backdrop-filter: blur(20px);
+}
+
+.ai-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    padding-bottom: 18px;
+}
+
+.ai-avatar,
+.chat-avatar {
+    width: 46px;
+    height: 46px;
+    border-radius: 13px;
+    background: #6c63ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+}
+
+.ai-card h5 {
+    margin: 0;
+}
+
+.ai-card small {
+    color: #8793a5;
+}
+
+.online-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: #38d996;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.chat-preview {
+    padding: 25px 0;
+}
+
+.message {
+    max-width: 85%;
+    padding: 12px 15px;
+    border-radius: 14px;
+    margin-bottom: 12px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.bot-message {
+    background: #18273b;
+    color: #d8dfeb;
+}
+
+.user-message {
+    background: #6c63ff;
+    margin-left: auto;
+}
+
+.chat-start {
+    width: 100%;
+    border: none;
+    padding: 13px;
+    border-radius: 10px;
+    background: #25344a;
+    color: white;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.chat-start:hover {
+    background: #6c63ff;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+.section {
+    padding: 110px 0;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 680px;
+    margin: 0 auto 60px;
+}
+
+.section-heading span,
+.small-title {
+    color: #6c63ff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.section-heading h2 {
+    font-size: 45px;
+    font-weight: 800;
+    margin: 15px 0;
+}
+
+.section-heading p {
+    color: #8d99a9;
+    line-height: 1.7;
+}
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.feature-card {
+    height: 100%;
+    padding: 32px;
+    border-radius: 19px;
+    background: #0d1a2b;
+    border: 1px solid #1b2a3e;
+    transition: 0.35s;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+    border-color: #6c63ff;
+    box-shadow: 0 18px 45px rgba(0,0,0,0.2);
+}
+
+.feature-icon {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 14px;
+    background: rgba(108,99,255,0.13);
+    color: #8b84ff;
+    font-size: 22px;
+    margin-bottom: 22px;
+}
+
+.feature-card h4 {
+    margin-bottom: 12px;
+}
+
+.feature-card p {
+    color: #8996a8;
+    line-height: 1.65;
+}
+
+/* =========================
+   COURSES
+========================= */
+
+.courses-section {
+    padding: 110px 0;
+    background: #091523;
+}
+
+.course-card {
+    position: relative;
+    overflow: hidden;
+    padding: 35px;
+    min-height: 285px;
+    background: #0d1a2b;
+    border: 1px solid #1d2d42;
+    border-radius: 20px;
+    transition: 0.35s;
+}
+
+.course-card:hover {
+    transform: translateY(-7px);
+    border-color: #6c63ff;
+}
+
+.course-number {
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    font-size: 55px;
+    font-weight: 800;
+    color: rgba(255,255,255,0.04);
+}
+
+.course-card > i {
+    font-size: 37px;
+    color: #6c63ff;
+}
+
+.course-card h4 {
+    margin-top: 24px;
+}
+
+.course-card p {
+    color: #8996a8;
+    line-height: 1.6;
+}
+
+.course-card a {
+    color: #8b84ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+    padding: 110px 0;
+}
+
+.about-section h2 {
+    font-size: 50px;
+    font-weight: 800;
+    margin-top: 15px;
+}
+
+.about-section h2 span {
+    color: #6c63ff;
+}
+
+.about-section p {
+    color: #929eae;
+    line-height: 1.8;
+    font-size: 16px;
+}
+
+/* =========================
+   CHATBOT
+========================= */
+
+.chatbot {
+    position: fixed;
+    right: 25px;
+    bottom: 90px;
+    width: 370px;
+    max-width: calc(100% - 30px);
+    background: #0d1a2b;
+    border: 1px solid #293a50;
+    border-radius: 19px;
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.55);
+    z-index: 1000;
+    display: none;
+}
+
+.chatbot.active {
+    display: block;
+    animation: chatOpen 0.25s ease;
+}
+
+@keyframes chatOpen {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.chat-header {
+    padding: 15px;
+    background: #14243a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.chat-profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.chat-profile small {
+    display: block;
+    color: #8592a4;
+}
+
+.chat-header button {
+    border: none;
+    background: transparent;
+    color: #aab5c4;
+}
+
+.chat-messages {
+    height: 300px;
+    padding: 15px;
+    overflow-y: auto;
+}
+
+.chat-bubble {
+    max-width: 85%;
+    padding: 11px 13px;
+    margin-bottom: 10px;
+    border-radius: 13px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.chat-bubble.bot {
+    background: #18283d;
+}
+
+.chat-bubble.user {
+    background: #6c63ff;
+    margin-left: auto;
+}
+
+.quick-questions {
+    display: flex;
+    gap: 6px;
+    padding: 8px 12px;
+    overflow-x: auto;
+}
+
+.quick-questions button {
+    white-space: nowrap;
+    border: 1px solid #304158;
+    background: transparent;
+    color: #b8c2d0;
+    padding: 6px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.chat-input {
+    display: flex;
+    padding: 12px;
+    gap: 8px;
+    border-top: 1px solid #24354a;
+}
+
+.chat-input input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: #142338;
+    color: white;
+    padding: 11px;
+    border-radius: 10px;
+}
+
+.chat-input button {
+    width: 45px;
+    border: none;
+    border-radius: 10px;
+    background: #6c63ff;
+    color: white;
+}
+
+/* =========================
+   FLOATING AI BUTTON
+========================= */
+
+.floating-ai {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 57px;
+    height: 57px;
+    border: none;
+    border-radius: 50%;
+    background: #6c63ff;
+    color: white;
+    font-size: 22px;
+    box-shadow: 0 10px 30px rgba(108,99,255,0.4);
+    z-index: 999;
+    transition: 0.3s;
+}
+
+.floating-ai:hover {
+    transform: scale(1.1);
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .hero {
+        padding-top: 130px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: -2px;
+    }
+
+    .hero-stats {
+        gap: 25px;
+    }
+
+    .section-heading h2 {
+        font-size: 35px;
+    }
+
+    .about-section h2 {
+        font-size: 38px;
+        margin-bottom: 25px;
+    }
+
+    .ai-card {
+        margin-top: 50px;
+    }
+
+    .chatbot {
+        right: 15px;
+        bottom: 85px;
+    }
+}
+.course-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 18px;
+    transition: 0.3s;
+}
+
+.course-card:hover {
+    transform: translateY(-8px);
+    border-color: #8b5cf6;
+}
+
+.course-card i {
+    color: #8b5cf6;
+}
+
+.course-card p {
+    color: #aaa;
+    line-height: 1.6;
+}

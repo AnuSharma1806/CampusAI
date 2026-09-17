@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CampusAI | Smart College Assistant</title>
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Our CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+
+        <div class="container">
+
+            <a class="navbar-brand" href="index.html">
+                <i class="bi bi-stars"></i>
+                Campus<span>AI</span>
+            </a>
+
+            <button class="navbar-toggler" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="page/academics.html">
+                            Academics
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="page/notices.html">
+                            Notices
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="page/events.html">
+                            Events
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="page/student.html">
+                            Student Zone
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="page/faculty.html">
+                             faculty Zone
+                        </a>
+                    </li> 
+
+                    <li class="nav-item ms-lg-3">
+
+                        <button class="ai-nav-btn" onclick="openChat()">
+                            <i class="bi bi-robot"></i>
+                            Ask CampusAI
+                        </button>
+
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+    </nav>
+
+
+    <!-- HERO SECTION -->
+
+    <section id="home" class="hero">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <!-- LEFT -->
+
+                <div class="col-lg-7">
+
+                    <div class="badge-ai">
+
+                        <i class="bi bi-stars"></i>
+
+                        Your Smart Campus Assistant
+
+                    </div>
+
+
+                    <h1>
+
+                        Your Campus.
+
+                        <br>
+
+                        <span>Powered by AI.</span>
+
+                    </h1>
+
+
+                    <p class="hero-text">
+
+                        A smarter way to explore your college,
+                        discover academic resources, stay updated
+                        with notices and get instant answers with AI.
+
+                    </p>
+
+
+                    <div class="hero-buttons">
+
+                        <button class="primary-btn" onclick="openChat()">
+
+                            <i class="bi bi-chat-dots"></i>
+
+                            Chat with CampusAI
+
+                        </button>
+
+
+                        <a href="#features" class="secondary-btn">
+
+                            Explore Features
+
+                            <i class="bi bi-arrow-down"></i>
+
+                        </a>
+
+                    </div>
+
+
+                    <!-- STATS -->
+
+                    <div class="hero-stats">
+
+                        <div>
+
+                            <h4>24/7</h4>
+
+                            <p>AI Assistance</p>
+
+                        </div>
+
+
+                        <div>
+
+                            <h4>100+</h4>
+
+                            <p>Resources</p>
+
+                        </div>
+
+
+                        <div>
+
+                            <h4>Fast</h4>
+
+                            <p>Smart Answers</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- RIGHT AI CARD -->
+
+                <div class="col-lg-5">
+
+                    <div class="ai-card">
+
+                        <div class="ai-card-header">
+
+                            <div class="ai-avatar">
+
+                                <i class="bi bi-robot"></i>
+
+                            </div>
+
+
+                            <div>
+
+                                <h5>CampusAI</h5>
+
+                                <small>
+
+                                    <span class="online-dot"></span>
+
+                                    Online now
+
+                                </small>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="chat-preview">
+
+                            <div class="message bot-message">
+
+                                👋 Hi! I'm CampusAI.
+
+                                <br>
+
+                                How can I help you today?
+
+                            </div>
+
+
+                            <div class="message user-message">
+
+                                What can you help me with?
+
+                            </div>
+
+
+                            <div class="message bot-message">
+
+                                I can help with courses,
+                                exams, notices, events
+                                and campus information. ✨
+
+                            </div>
+
+                        </div>
+
+
+                        <button class="chat-start" onclick="openChat()">
+
+                            Start Conversation
+
+                            <i class="bi bi-arrow-right"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+
+    <section id="features" class="section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>SMART FEATURES</span>
+
+                <h2>
+                    Everything you need,
+                    <br>
+                    in one campus.
+                </h2>
+
+                <p>
+                    CampusAI brings useful college information
+                    together in one simple platform.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="bi bi-robot"></i>
+
+                        </div>
+
+                        <h4>AI Assistant</h4>
+
+                        <p>
+                            Ask questions and get intelligent
+                            answers instantly.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="bi bi-book"></i>
+
+                        </div>
+
+                        <h4>Study Resources</h4>
+
+                        <p>
+                            Find notes, subjects and useful
+                            learning resources easily.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="bi bi-calendar-event"></i>
+
+                        </div>
+
+                        <h4>Events & Notices</h4>
+
+                        <p>
+                            Stay updated with campus events
+                            and important announcements.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="bi bi-search"></i>
+
+                        </div>
+
+                        <h4>Smart Search</h4>
+
+                        <p>
+                            Quickly search for important
+                            campus information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="bi bi-phone"></i>
+
+                        </div>
+
+                        <h4>Mobile Friendly</h4>
+
+                        <p>
+                            Access CampusAI from phones,
+                            tablets and laptops.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-6 col-lg-4">
+
+                    <div class="feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="bi bi-lightning-charge"></i>
+
+                        </div>
+
+                        <h4>Instant Answers</h4>
+
+                        <p>
+                            Get quick responses whenever
+                            you need campus information.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- COURSES -->
+
+    <section id="courses" class="courses-section">
+
+        <div class="container">
+
+            <div class="section-heading">
+
+                <span>ACADEMIC PROGRAMS</span>
+
+                <h2>Explore Courses</h2>
+
+                <p>
+                    Discover different areas of study.
+                </p>
+
+            </div>
+
+
+            <div class="row g-4">
+
+
+                <div class="col-md-4">
+
+                    <div class="course-card">
+
+                        <div class="course-number">01</div>
+
+                        <i class="bi bi-code-slash"></i>
+
+                        <h4>Computer Science</h4>
+
+                        <p>
+                            Programming, algorithms,
+                            software and technology.
+                        </p>
+
+                        <a href="pages/academics.html">
+                            Explore
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="course-card">
+
+                        <div class="course-number">02</div>
+
+                        <i class="bi bi-bar-chart"></i>
+
+                        <h4>Data Science</h4>
+
+                        <p>
+                            Data analysis, statistics,
+                            AI and machine learning.
+                        </p>
+
+                        <a href="pages/academics.html">
+                            Explore
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+                    <div class="course-card">
+
+                        <div class="course-number">03</div>
+
+                        <i class="bi bi-cpu"></i>
+
+                        <h4>Artificial Intelligence</h4>
+
+                        <p>
+                            Machine learning and
+                            intelligent systems.
+                        </p>
+
+                        <a href="pages/academics.html">
+                            Explore
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+
+    <section id="about" class="about-section">
+
+        <div class="container">
+
+            <div class="row align-items-center">
+
+                <div class="col-lg-6">
+
+                    <span class="small-title">
+                        ABOUT CAMPUSAI
+                    </span>
+
+                    <h2>
+                        Making campus life
+                        <span>smarter.</span>
+                    </h2>
+
+                </div>
+
+
+                <div class="col-lg-6">
+
+                    <p>
+                        CampusAI is a smart digital campus
+                        assistant designed to make college
+                        information easier to access.
+                    </p>
+
+                    <p>
+                        From academics and notices to events
+                        and student resources, everything is
+                        brought together in one platform.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <section id="courses" class="py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <span class="badge bg-primary mb-3">ACADEMIC PROGRAMS</span>
+            <h2 class="fw-bold">Explore Our Courses</h2>
+            <p class="text-secondary">
+                Choose a program and start building your future.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-4">
+                <div class="course-card h-100 p-4">
+                    <i class="bi bi-code-slash fs-1"></i>
+                    <h4 class="mt-3">Computer Science & Engineering</h4>
+                    <p>Learn programming, software development, databases and modern computing.</p>
+                    <a href="page/academics.html" class="btn btn-outline-light">
+                        View Details
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="course-card h-100 p-4">
+                    <i class="bi bi-robot fs-1"></i>
+                    <h4 class="mt-3">CSE – AI & Data Science</h4>
+                    <p>Explore artificial intelligence, data science, machine learning and analytics.</p>
+                    <a href="page/academics.html" class="btn btn-outline-light">
+                        View Details
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="course-card h-100 p-4">
+                    <i class="bi bi-lightning-charge fs-1"></i>
+                    <h4 class="mt-3">Electrical Engineering</h4>
+                    <p>Study electrical systems, circuits, machines and modern power technologies.</p>
+                    <a href="page/academics.html" class="btn btn-outline-light">
+                        View Details
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="course-card h-100 p-4">
+                    <i class="bi bi-gear-wide-connected fs-1"></i>
+                    <h4 class="mt-3">Mechanical Engineering</h4>
+                    <p>Learn machines, manufacturing, mechanics and engineering design.</p>
+                    <a href="page/academics.html" class="btn btn-outline-light">
+                        View Details
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="course-card h-100 p-4">
+                    <i class="bi bi-building fs-1"></i>
+                    <h4 class="mt-3">Civil Engineering</h4>
+                    <p>Explore construction, structures, transportation and infrastructure.</p>
+                    <a href="page/academics.html" class="btn btn-outline-light">
+                        View Details
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <div class="course-card h-100 p-4">
+                    <i class="bi bi-bar-chart-line fs-1"></i>
+                    <h4 class="mt-3">Data Science</h4>
+                    <p>Develop skills in data analysis, Python, statistics and machine learning.</p>
+                    <a href="page/academics.html" class="btn btn-outline-light">
+                        View Details
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="row g-4">
+
+        <div class="col-lg-6">
+            <div class="card p-4 h-100">
+                <h3>📢 Latest Notices</h3>
+                <p class="text-secondary">
+                    Important college notices and announcements will appear here.
+                </p>
+                <a href="page/notices.html" class="btn btn-primary">
+                    View Notices
+                </a>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <div class="card p-4 h-100">
+                <h3>📅 Upcoming Events</h3>
+                <p class="text-secondary">
+                    Stay updated with upcoming college events.
+                </p>
+                <a href="page/events.html" class="btn btn-primary">
+                    View Events
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<section class="container py-5">
+    <div class="row g-4">
+
+        <!-- Latest Notices -->
+        <div class="col-lg-6">
+            <div class="card h-100 p-4">
+                <h3 class="mb-4">
+                    📢 Latest Notices
+                </h3>
+
+                <div class="border-bottom pb-3 mb-3">
+                    <h5>Semester Examination Notice</h5>
+                    <p class="text-secondary mb-1">
+                        Check the latest examination updates.
+                    </p>
+                    <a href="pages/notices.html" class="btn btn-sm btn-outline-light">
+                        View Notice
+                    </a>
+                </div>
+
+                <div class="border-bottom pb-3 mb-3">
+                    <h5>Academic Schedule</h5>
+                    <p class="text-secondary mb-1">
+                        Important academic schedule and updates.
+                    </p>
+                    <a href="pages/notices.html" class="btn btn-sm btn-outline-light">
+                        View Notice
+                    </a>
+                </div>
+
+                <a href="pages/notices.html" class="btn btn-primary">
+                    View All Notices
+                </a>
+            </div>
+        </div>
+
+        <!-- Upcoming Events -->
+        <div class="col-lg-6">
+            <div class="card h-100 p-4">
+                <h3 class="mb-4">
+                    📅 Upcoming Events
+                </h3>
+
+                <div class="border-bottom pb-3 mb-3">
+                    <h5>Technical Workshop</h5>
+                    <p class="text-secondary mb-1">
+                        Explore technology and practical skills.
+                    </p>
+                    <a href="pages/events.html" class="btn btn-sm btn-outline-light">
+                        View Event
+                    </a>
+                </div>
+
+                <div class="border-bottom pb-3 mb-3">
+                    <h5>Student Activities</h5>
+                    <p class="text-secondary mb-1">
+                        Stay updated with campus activities.
+                    </p>
+                    <a href="pages/events.html" class="btn btn-sm btn-outline-light">
+                        View Event
+                    </a>
+                </div>
+
+                <a href="pages/events.html" class="btn btn-primary">
+                    View All Events
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+    <!-- CHATBOT -->
+
+    <div id="chatbot" class="chatbot">
+
+        <div class="chat-header">
+
+            <div class="chat-profile">
+
+                <div class="chat-avatar">
+
+                    <i class="bi bi-robot"></i>
+
+                </div>
+
+                <div>
+
+                    <strong>CampusAI</strong>
+
+                    <small>
+
+                        <span class="online-dot"></span>
+
+                        AI Assistant
+
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <button onclick="closeChat()">
+
+                <i class="bi bi-x-lg"></i>
+
+            </button>
+
+        </div>
+
+
+        <div id="chatMessages" class="chat-messages">
+
+            <div class="chat-bubble bot">
+
+                👋 Hey! I'm CampusAI.
+
+                <br><br>
+
+                Ask me anything about your campus.
+
+            </div>
+
+        </div>
+
+
+        <div class="quick-questions">
+
+            <button onclick="quickQuestion('Tell me about courses')">
+                Courses
+            </button>
+
+            <button onclick="quickQuestion('Tell me about exams')">
+                Exams
+            </button>
+
+            <button onclick="quickQuestion('Show study resources')">
+                Resources
+            </button>
+
+        </div>
+
+
+        <div class="chat-input">
+
+            <input
+                type="text"
+                id="userInput"
+                placeholder="Ask CampusAI..."
+                onkeypress="handleEnter(event)"
+            >
+
+            <button onclick="sendMessage()">
+
+                <i class="bi bi-send-fill"></i>
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- FLOATING AI BUTTON -->
+
+    <button class="floating-ai" onclick="openChat()">
+
+        <i class="bi bi-stars"></i>
+
+    </button>
+
+
+    <!-- Bootstrap JavaScript -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Our JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
